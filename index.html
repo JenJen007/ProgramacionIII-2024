@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css">
+    <title>MI HTML</title>
+  </head>
+  <body>
+    <header>
+      <h1>Encabezado Principal</h1>
+    </header>
+      <main>
+        <nav>
+          <ul>
+            <li><a href="#estructura">Estructura</a></li>
+            <li><a href="#multimedia">Multimedia</a></li>
+            <li><a href="#formulario">Formulario</a></li>
+          </ul>
+        </nav>
+        <section class="estructura">
+          <div>
+            <!-- Encabezados y propiedades del texto -->
+            <h2>
+              1. Estructura Básica del Documento HTML
+            </h2>
+            <p>
+              Este documento HTML tiene una estructura básica que incluye la
+              declaración de DOCTYPE, etiquetas de metadatos y un título
+            </p>
+            <hr />
+            <h2>2.Encabezados y Propiedades del Texto</h2>
+            <h3><b>Este es un texto en negrita.</b></h3>
+            <h4><em>Este es un texto en cursiva.</em></h4>
+            <h5><u>Este es un texto subrayado.</u></h5>
+          </div>
+          <!-- Secciones -->
+          <div>
+            <h2>3.Divisiones y Agrupación de Contenido</h2>
+            <div>
+              <h3>Sección 1</h3>
+              <p>Contenido de la primera sección agrupada en un div</p>
+            </div>
+            <div>
+              <h3>Sección 2</h3>
+              <p>Contenido de la segunda sección agrupada en un div</p>
+            </div>
+          </div>
+        </section>
+        <article class="multimedia">
+              
+    <!--Enlaces y Listas -->
+    <div>
+      <h2>4.Enlaces y Listas</h2>
+      <p>
+        Visita nuestro
+        <a href="http://www.google.com" target="_blank"> sitio web</a>
+        para más información.
+      </p>
+      <h3>Enlaces Internos</h3>
+      <div>
+        <nav>
+          <a href="#seccion1">Ir a Estructura</a> |
+          <a href="#seccion2">Ir a Multimedia</a> |
+          <a href="#seccion3">Ir a Formulario</a>
+        </nav>
+      </div>
+      <h3>Listas Desordenadas</h3>
+      <div>
+        <ul>
+          <li>Primer ítem de una lista desordenada</li>
+          <li>Segundo ítem de una lista desordenada</li>
+        </ul>
+      </div>
+      <h3>Lista Ordenada</h3>
+      <ol>
+        <li>Primer ítem de una lista ordenada</li>
+        <li>Segundo ítem de una lista ordenada</li>
+      </ol>
+      <h3>Listas de Desplegables</h3>
+      <div>
+        <dl>
+          <dt>Término 1</dt>
+          <dd>Definición 1</dd>
+          <dt>Término 2</dt>
+          <dd>Definición 2</dd>
+        </dl>
+      </div>
+    </div>
+    <!-- Elementos Multimedia -->
+     <div>
+      <h2>5. Elementos Multimedia</h2>
+      
+      <div>
+        <h3>Imágenes</h3>
+        <img src="https://cdn.pixabay.com/photo/2024/01/09/13/08/wooden-house-8497574_1280.jpg" width="400px" height="400px" alt="Placeholder Image" />
+      </div>
+     
+      <div>
+        <h3>Videos</h3>
+        <video controls width="400px" height="400px">
+          <source src="https://cdn.pixabay.com/video/2023/10/07/183960-872226574_large.mp4" type="video/mp4"  />
+        </video>
+      </div>
+    
+      <div>
+        <h3>Audio</h3>
+        <audio controls>
+          <source src="https://download.blender.org/peach/trailer/trailer_1080p.ogg" controls type="audio/mpeg" />
+        </audio>
+      </div>
+      <!-- Tablas -->
+       <div>
+        <h2>6. Tablas</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Columna 1</th>
+              <th>Columna 2</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Dato 1</td>
+              <td>Dato 2</td>
+            </tr>
+            <tr>
+              <td>Dato 3</td>
+              <td>Dato 4</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        </article>
+          <!-- Formularios -->
+          <div class="formulario">
+            <h3>Formularios</h3>
+            <form>
+              <div>
+                <label for="nombre">Nombre</label>
+                <input type="text" placeholder="Ingrese su nombre">
+              </div>
+             <div>
+              <label for="email">Email</label>
+              <input type="email" placeholder="example@example.com">
+             </div>
+            <div>
+              <label for="mensaje">Mensaje</label>
+              <textarea placeholder="Ingrese su mensaje"></textarea>
+            </div>
+            <button type="submit">Enviar</button>
+            </form>
+          </div>
+      </main>
+      <footer>
+        <p>2024 Trabajo Práctico de HTML</p>
+      </footer>
+
+      
+  </body>
+</html>
