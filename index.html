@@ -7,18 +7,18 @@
     <title>MI HTML</title>
   </head>
   <body>
-    <header>
+    <header class="head">
       <h1>Encabezado Principal</h1>
     </header>
       <main>
-        <nav>
+        <nav class="nav_bar">
           <ul>
             <li><a href="#estructura">Estructura</a></li>
             <li><a href="#multimedia">Multimedia</a></li>
             <li><a href="#formulario">Formulario</a></li>
           </ul>
         </nav>
-        <section class="estructura">
+        <section class="estructura" id="seccion1">
           <div>
             <!-- Encabezados y propiedades del texto -->
             <h2>
@@ -30,19 +30,19 @@
             </p>
             <hr />
             <h2>2.Encabezados y Propiedades del Texto</h2>
-            <h3><b>Este es un texto en negrita.</b></h3>
-            <h4><em>Este es un texto en cursiva.</em></h4>
-            <h5><u>Este es un texto subrayado.</u></h5>
+            <h3 class="text"><b>Este es un texto en negrita.</b></h3>
+            <h4 class="text"><em>Este es un texto en cursiva.</em></h4>
+            <h5 class="text"><u>Este es un texto subrayado.</u></h5>
           </div>
           <!-- Secciones -->
           <div>
             <h2>3.Divisiones y Agrupación de Contenido</h2>
             <div>
-              <h3>Sección 1</h3>
+              <h3 class="sections">Sección 1</h3>
               <p>Contenido de la primera sección agrupada en un div</p>
             </div>
             <div>
-              <h3>Sección 2</h3>
+              <h3 class="sections">Sección 2</h3>
               <p>Contenido de la segunda sección agrupada en un div</p>
             </div>
           </div>
@@ -52,61 +52,63 @@
     <!--Enlaces y Listas -->
     <div>
       <h2>4.Enlaces y Listas</h2>
-      <p>
+      <p class="link">
         Visita nuestro
-        <a href="http://www.google.com" target="_blank"> sitio web</a>
+        <a class="link" id="link2" href="http://www.google.com" target="_blank"> sitio web</a>
         para más información.
       </p>
       <h3>Enlaces Internos</h3>
       <div>
-        <nav>
+        <nav class="nav2">
           <a href="#seccion1">Ir a Estructura</a> |
           <a href="#seccion2">Ir a Multimedia</a> |
           <a href="#seccion3">Ir a Formulario</a>
         </nav>
       </div>
       <h3>Listas Desordenadas</h3>
-      <div>
-        <ul>
-          <li>Primer ítem de una lista desordenada</li>
+      <div class="desor">
+        <ul class="desor">
+          <li class="desor">Primer ítem de una lista desordenada</li>
           <li>Segundo ítem de una lista desordenada</li>
         </ul>
       </div>
       <h3>Lista Ordenada</h3>
-      <ol>
-        <li>Primer ítem de una lista ordenada</li>
-        <li>Segundo ítem de una lista ordenada</li>
-      </ol>
+      <div class="orde">
+        <ol class="orde">
+          <li class="orde">Primer ítem de una lista ordenada</li>
+          <li>Segundo ítem de una lista ordenada</li>
+        </ol>
+      </div>
       <h3>Listas de Desplegables</h3>
-      <div>
-        <dl>
-          <dt>Término 1</dt>
-          <dd>Definición 1</dd>
+      <div class="desple">
+        <dl class="desple">
+          <dt class="desple">Término 1</dt>
+          <dd class="desple">Definición 1</dd>
           <dt>Término 2</dt>
           <dd>Definición 2</dd>
         </dl>
       </div>
     </div>
     <!-- Elementos Multimedia -->
-     <div>
+     <div id="seccion2">
       <h2>5. Elementos Multimedia</h2>
       
       <div>
         <h3>Imágenes</h3>
-        <img src="https://cdn.pixabay.com/photo/2024/01/09/13/08/wooden-house-8497574_1280.jpg" width="400px" height="400px" alt="Placeholder Image" />
+        <img class="image" src="/assets/1.jpg" alt="Placeholder Image" />
       </div>
      
       <div>
         <h3>Videos</h3>
         <video controls width="400px" height="400px">
-          <source src="https://cdn.pixabay.com/video/2023/10/07/183960-872226574_large.mp4" type="video/mp4"  />
+          <source src="/assets/sea.mp4" type="video/mp4"  />
         </video>
       </div>
     
       <div>
         <h3>Audio</h3>
         <audio controls>
-          <source src="https://download.blender.org/peach/trailer/trailer_1080p.ogg" controls type="audio/mpeg" />
+          <source src="/assets/cat.mp3" controls type="audio/mpeg" />
         </audio>
       </div>
       <!-- Tablas -->
@@ -134,7 +136,7 @@
       <div>
         </article>
           <!-- Formularios -->
-          <div class="formulario">
+          <div class="formulario" id="seccion3">
             <h3>Formularios</h3>
             <form>
               <div>
@@ -156,7 +158,14 @@
       <footer>
         <p>2024 Trabajo Práctico de HTML</p>
       </footer>
-
-      
   </body>
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor =>{
+      anchor.addEventListener('click',function(e){
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior:'smooth'
+        });
+      });
+    });
+  </script>
 </html>
