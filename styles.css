@@ -335,6 +335,12 @@ textarea {
   font-family: 'Times New Roman', Times, serif;
 }
 
+textarea {
+  resize: none; /* Deshabilita el redimensionamiento */
+  height: 100px; 
+  box-sizing: border-box; 
+}
+
 button {
   display: block;
   width: 100%;
