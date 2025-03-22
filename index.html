@@ -1,124 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css">
-    <title>MI HTML</title>
+    <meta name="description" content="Un ejemplo de página HTML bien estructurada con buenas prácticas de SEO y accesibilidad." />
+    <meta name="keywords" content="HTML, SEO, desarrollo web, accesibilidad, multimedia" />
+    <meta name="author" content="Tu Nombre" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Guía Completa de HTML con Buenas Prácticas de SEO</title>
   </head>
   <body>
-    <header class="head">
-      <h1>Encabezado Principal</h1>
+    <header class="head" role="banner">
+      <h1 itemprop="name">Encabezado Principal: Guía Completa de HTML</h1>
     </header>
-      <main>
-        <nav class="nav_bar">
-          <ul>
-            <li><a href="#estructura">Estructura</a></li>
-            <li><a href="#multimedia">Multimedia</a></li>
-            <li><a href="#formulario">Formulario</a></li>
-          </ul>
-        </nav>
-        <section class="estructura" id="seccion1">
-          <div>
-            <!-- Encabezados y propiedades del texto -->
-            <h2>
-              1. Estructura Básica del Documento HTML
-            </h2>
-            <p>
-              Este documento HTML tiene una estructura básica que incluye la
-              declaración de DOCTYPE, etiquetas de metadatos y un título
-            </p>
-            <hr />
-            <h2>2.Encabezados y Propiedades del Texto</h2>
-            <h3 class="text"><b>Este es un texto en negrita.</b></h3>
-            <h4 class="text"><em>Este es un texto en cursiva.</em></h4>
-            <h5 class="text"><u>Este es un texto subrayado.</u></h5>
-          </div>
-          <!-- Secciones -->
-          <div>
-            <h2>3.Divisiones y Agrupación de Contenido</h2>
-            <div>
-              <h3 class="sections">Sección 1</h3>
-              <p>Contenido de la primera sección agrupada en un div</p>
-            </div>
-            <div>
-              <h3 class="sections">Sección 2</h3>
-              <p>Contenido de la segunda sección agrupada en un div</p>
-            </div>
-          </div>
-        </section>
-        <article class="multimedia">
-              
-    <!--Enlaces y Listas -->
-    <div>
-      <h2>4.Enlaces y Listas</h2>
-      <p class="link">
-        Visita nuestro
-        <a class="link" id="link2" href="http://www.google.com" target="_blank"> sitio web</a>
-        para más información.
-      </p>
-      <h3>Enlaces Internos</h3>
-      <div>
-        <nav class="nav2">
-          <a href="#seccion1">Ir a Estructura</a> |
-          <a href="#seccion2">Ir a Multimedia</a> |
-          <a href="#seccion3">Ir a Formulario</a>
-        </nav>
-      </div>
-      <h3>Listas Desordenadas</h3>
-      <div class="desor">
-        <ul class="desor">
-          <li class="desor">Primer ítem de una lista desordenada</li>
-          <li>Segundo ítem de una lista desordenada</li>
+    <main role="main">
+      <nav class="nav_bar" role="navigation" aria-label="Navegación principal">
+        <ul>
+          <li><a href="#basica" aria-label="Ir a la sección Estructura Básica">Estructura Básica</a></li>
+          <li><a href="#multimedia" aria-label="Ir a la sección Multimedia">Multimedia</a></li>
+          <li><a href="#formulario" aria-label="Ir a la sección Formulario">Formulario</a></li>
         </ul>
-      </div>
-      <h3>Lista Ordenada</h3>
-      <div class="orde">
-        <ol class="orde">
-          <li class="orde">Primer ítem de una lista ordenada</li>
-          <li>Segundo ítem de una lista ordenada</li>
-        </ol>
-      </div>
-      <h3>Listas de Desplegables</h3>
-      <div class="desple">
-        <dl class="desple">
-          <dt class="desple">Término 1</dt>
-          <dd class="desple">Definición 1</dd>
-          <dt>Término 2</dt>
-          <dd>Definición 2</dd>
-        </dl>
-      </div>
-    </div>
-    <!-- Elementos Multimedia -->
-     <div id="seccion2">
-      <h2>5. Elementos Multimedia</h2>
-      
-      <div>
-        <h3>Imágenes</h3>
-        <img class="image" src="/assets/1.jpg" alt="Placeholder Image" />
-      </div>
-     
-      <div>
-        <h3>Videos</h3>
-        <video controls width="400px" height="400px">
-          <source src="/assets/sea.mp4" type="video/mp4"  />
-        </video>
-      </div>
-    
-      <div>
-        <h3>Audio</h3>
-        <audio controls>
-          <source src="/assets/cat.mp3" controls type="audio/mpeg" />
-        </audio>
-      </div>
-      <!-- Tablas -->
-       <div>
+      </nav>
+
+      <section class="estructura" id="basica" itemscope itemtype="https://schema.org/Article">
+        <div>
+          <h2 itemprop="headline">1. Estructura Básica del Documento HTML</h2>
+          <p itemprop="description">
+            Este documento HTML tiene una estructura básica que incluye la declaración de DOCTYPE, etiquetas de metadatos y un título.
+          </p>
+          <hr />
+          <h2>2. Encabezados y Propiedades del Texto</h2>
+          <h3 class="text"><b itemprop="highlight">Este es un texto en negrita.</b></h3>
+          <h4 class="text"><em itemprop="highlight">Este es un texto en cursiva.</em></h4>
+          <h5 class="text"><u itemprop="highlight">Este es un texto subrayado.</u></h5>
+        </div>
+        <div>
+          <h2>3. Divisiones y Agrupación de Contenido</h2>
+          <div>
+            <h3 class="sections">Sección 1</h3>
+            <p>Contenido de la primera sección agrupada en un div.</p>
+          </div>
+          <div>
+            <h3 class="sections">Sección 2</h3>
+            <p>Contenido de la segunda sección agrupada en un div.</p>
+          </div>
+        </div>
+      </section>
+
+      <article class="multimedia" id="multimedia" itemscope itemtype="https://schema.org/Article">
+        <h2 itemprop="headline">4. Enlaces y Listas</h2>
+      <!-- Sección de recursos externos -->
+<div>
+  <h3>Recursos Externos</h3>
+  <ul class="external-links">
+    <li><a href="https://developer.mozilla.org" target="_blank" aria-label="Visitar MDN Web Docs">MDN Web Docs</a></li>
+    <li><a href="https://www.w3schools.com" target="_blank" aria-label="Visitar W3Schools">W3Schools</a></li>
+    <li><a href="https://www.freecodecamp.org" target="_blank" aria-label="Visitar FreeCodeCamp">FreeCodeCamp</a></li>
+  </ul>
+</div>
+        <h3>Lista Desordenada</h3>
+        <div class="desor">
+          <ul class="desor">
+            <li class="desor">Primer ítem de una lista desordenada</li>
+            <li>Segundo ítem de una lista desordenada</li>
+          </ul>
+        </div>
+        <h3>Lista Ordenada</h3>
+        <div class="orde">
+          <ol class="orde">
+            <li class="orde">Primer ítem de una lista ordenada</li>
+            <li>Segundo ítem de una lista ordenada</li>
+          </ol>
+        </div>
+        <h3>Lista Desplegable</h3>
+        <div class="desple">
+          <dl>
+            <dt class="desple-toggle">Término 1</dt>
+            <dd class="desple-content">Definición 1</dd>
+            <dt class="desple-toggle">Término 2</dt>
+            <dd class="desple-content">Definición 2</dd>
+          </dl>
+        </div>
+      </article>
+
+      <article class="multimedia" id="seccion2" itemscope itemtype="https://schema.org/Article">
+        <h2 itemprop="headline">5. Elementos Multimedia</h2>
+        <div>
+          <h3>Imágenes</h3>
+          <img class="image" src="/assets/1.jpg" alt="Imagen de ejemplo con un paisaje" loading="lazy" itemprop="image" />
+        </div>
+        <div>
+          <h3>Videos</h3>
+          <video controls width="400px" height="400px" aria-label="Video de ejemplo">
+            <source src="/assets/sea.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div>
+          <h3>Audio</h3>
+          <audio controls aria-label="Audio de ejemplo">
+            <source src="/assets/cat.mp3" type="audio/mpeg" />
+          </audio>
+        </div>
         <h2>6. Tablas</h2>
-        <table>
+        <table aria-label="Tabla de ejemplo">
           <thead>
             <tr>
-              <th>Columna 1</th>
-              <th>Columna 2</th>
+              <th scope="col">Columna 1</th>
+              <th scope="col">Columna 2</th>
             </tr>
           </thead>
           <tbody>
@@ -132,40 +120,65 @@
             </tr>
           </tbody>
         </table>
-      </div>
-      <div>
-        </article>
-          <!-- Formularios -->
-          <div class="formulario" id="seccion3">
-            <h3>Formularios</h3>
-            <form>
-              <div>
-                <label for="nombre">Nombre</label>
-                <input type="text" placeholder="Ingrese su nombre">
-              </div>
-             <div>
-              <label for="email">Email</label>
-              <input type="email" placeholder="example@example.com">
-             </div>
-            <div>
-              <label for="mensaje">Mensaje</label>
-              <textarea placeholder="Ingrese su mensaje"></textarea>
-            </div>
-            <button type="submit">Enviar</button>
-            </form>
+      </article>
+
+      <section class="formulario" id="formulario" itemscope itemtype="https://schema.org/WebPageElement">
+        <h3 class="formH3">7. Formularios</h3>
+        <form id="contact-form" aria-label="Formulario de Contacto">
+          <div>
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required minlength="3" />
           </div>
-      </main>
-      <footer>
-        <p>2024 Trabajo Práctico de HTML</p>
-      </footer>
-  </body>
-  <script>
-    document.querySelectorAll('a[href^="#"]').forEach(anchor =>{
-      anchor.addEventListener('click',function(e){
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior:'smooth'
-        });
+          <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="example@example.com" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"/>
+          </div>
+          <div>
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" placeholder="Ingrese su mensaje" required minlength="10"></textarea>
+          </div>
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+    </main>
+
+    <footer role="contentinfo">
+      <p>&copy; 2024 Trabajo Práctico de HTML - Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+     document.addEventListener("DOMContentLoaded", () => {
+  // Desplazamiento suave
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute("href")).scrollIntoView({
+        behavior: "smooth",
       });
     });
-  </script>
+  });
+
+  // Envío del formulario
+  document.getElementById("contact-form").addEventListener("submit", function (event) {
+    event.preventDefault();
+    const formData = new FormData(this);
+    const formObject = {};
+    formData.forEach((value, key) => {
+      formObject[key] = value;
+    });
+    console.log(formObject);
+    alert("¡Formulario enviado exitosamente!");
+    this.reset();
+  });
+
+  // Lista desplegable
+  document.querySelectorAll('.desple-toggle').forEach((toggle) => {
+    toggle.addEventListener('click', () => {
+      const content = toggle.nextElementSibling;
+      content.classList.toggle('active');
+    });
+  });
+});
+    </script>
+  </body>
 </html>
